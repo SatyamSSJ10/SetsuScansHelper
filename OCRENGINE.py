@@ -58,9 +58,11 @@ class OCREngine:
             return [x]
         
     def cleanup(self):
-        if self.reader or self.model:
-            import torch
-            torch.cuda.empty_cache()
+        try:
+            if self.reader or self.model:
+                import torch
+                torch.cuda.empty_cache()
+        except:
             pass
         self.reader = None
         self.model = None
