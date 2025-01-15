@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 class BoxDetection():
   def __init__(self):
-    self.model_path = r"./model/bubble.pt"
+    self.model_path = r"./SSHelper/bubble.pt"
     self.model = YOLO(self.model_path)
   
   def predict(self, image=None, *, conf =0.5, iou =0.4 ) -> tuple:
