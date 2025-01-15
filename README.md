@@ -12,6 +12,12 @@
 :grey_question: UI Improvements
 
 ## :wrench: Installation (For now please refer to the For Experienced section, need to make Install properly.bat)
+
+```
+git clone https://github.com/SatyamSSJ10/SetsuScansHelper
+cd ./SetsuScansHelper
+git clone https://huggingface.co/SatyamSSJ10/SSHelper
+```
 ### For Noobies
 Install CUDA and CUDNN
 
