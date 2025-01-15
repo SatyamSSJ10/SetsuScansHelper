@@ -20,7 +20,7 @@ class OCREngine:
         elif engine_name == "Japanese":
             from transformers import AutoFeatureExtractor, AutoTokenizer, VisionEncoderDecoderModel
 
-            self.pretrained_model_name_or_path = r"./model"
+            self.pretrained_model_name_or_path = r"./SSHelper"
             self.feature_extractor = AutoFeatureExtractor.from_pretrained(self.pretrained_model_name_or_path)
 
             self.tokenizer = AutoTokenizer.from_pretrained(self.pretrained_model_name_or_path)
