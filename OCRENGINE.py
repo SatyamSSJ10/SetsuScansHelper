@@ -52,7 +52,7 @@ class OCREngine:
             )
         elif self.engine_name == "Japanese" and self.feature_extractor and self.tokenizer and self.model:
             x = self.preprocess(np_image)
-            x = self.model.generate(x[None].to(self.model.device), max_length=300)[0] #.cpu()
+            x = self.model.generate(x[None].to(self.model.device), max_length=300)[0].cpu()
             x = self.tokenizer.decode(x, skip_special_tokens=True)
             x = self.post_process(x)
             return [x]
