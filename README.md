@@ -1,1 +1,1 @@
-[Usage](docs.pdf)
+![Usage](docs.pdf)
