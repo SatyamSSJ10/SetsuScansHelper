@@ -13,12 +13,14 @@
 
 ## :wrench: Installation (For now please refer to the For Experienced section, need to make Install properly.bat)
 
+The code in this repo is essentially for CPU usage only, it is working very good on my i5 11400, so I think it'll work great on your PC too.
+
 ```
 git clone https://github.com/SatyamSSJ10/SetsuScansHelper
 cd ./SetsuScansHelper
 git clone https://huggingface.co/SatyamSSJ10/SSHelper
 ```
-### For Noobies
+### For Noobies who wants to use GPU
 Install CUDA and CUDNN
 
 Set Path and Stuffs
