@@ -26,7 +26,15 @@ Set Path and Stuffs
 Run ```Install.bat```
 
 ### For Experienced
-So what we're dealing with here is Pytorch and Transformers, so install those and then leave the rest to requirements.txt, if you want you could setup an environment (preferred)
+So what we're dealing with here is Pytorch and Transformers, so install those and then leave the rest to requirements.txt, if you want you could setup an environment (preferred).
+
+Also, we're using a custom EasyOCR module here 
+```
+git clone https://github.com/SatyamSSJ10/EasyOCR
+cd ./
+pip install .
+cd ../
+```
 
 ## :space_invader: Running
 if you're using venv just enter it and run (use Powershell)
