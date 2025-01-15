@@ -20,22 +20,20 @@ git clone https://github.com/SatyamSSJ10/SetsuScansHelper
 cd ./SetsuScansHelper
 git clone https://huggingface.co/SatyamSSJ10/SSHelper
 ```
-### For Noobies who wants to use GPU
-Install CUDA and CUDNN
-
-Set Path and Stuffs
-
-Run ```Install.bat```
+### Auto Install is not properly set up, so you need to have some experience.
 
 ### For Experienced
-So what we're dealing with here is Pytorch and Transformers, so install those and then leave the rest to requirements.txt, if you want you could setup an environment (preferred).
+So, what we're dealing with here is Pytorch and Transformers, so install those and then leave the rest to requirements.txt. If you want, you could set up an environment (preferred). Get help of ChatGPT if you don't know what you are doing.
 
 Also, we're using a custom EasyOCR module here 
 ```
 git clone https://github.com/SatyamSSJ10/EasyOCR
-cd ./
+cd ./EasyOCR
 pip install .
 cd ../
+rmdir /Q /S EasyOCR
+pip install -r requirements.txt
+
 ```
 
 ## :space_invader: Running
