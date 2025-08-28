@@ -5,9 +5,9 @@
 ## :bar_chart:Future Updates
 :green_book: Option to turn off AI Engines
 
-:green_book: Option to Enable AI Translation
+:green_book: Option to Enable AI Translation :white_check_mark:
 
-:green_book: Comic/Manga/Manhua Text Box Auto Arrange
+:green_book: Comic/Manga/Manhua Text Box Auto Arrange :white_check_mark:
 
 :grey_question: UI Improvements
 
