@@ -616,8 +616,8 @@ class MainWindow(QMainWindow):
                 }
             """)
             btn_x.setCursor(Qt.CursorShape.PointingHandCursor)
-        self.issues_button.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://github.com/yourrepo/issues")))
-        self.github_button.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://github.com/yourrepo")))
+        self.issues_button.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://github.com/SatyamSSJ10/SetsuScansHelper/issues")))
+        self.github_button.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://github.com/SatyamSSJ10/SetsuScansHelper")))
         left_vlayout.addWidget(self.copyright_button)
         left_vlayout.addWidget(self.issues_button)
         left_vlayout.addWidget(self.github_button)
