@@ -1,5 +1,6 @@
 import jaconv
 import re
+import os
 from PIL import Image
 class OCREngine:
     """
@@ -12,6 +13,7 @@ class OCREngine:
         self.pretrained_model_name_or_path = None
         self.feature_extractor = None
         self.model = None
+        script_dir = os.path.dirname(os.path.abspath(__file__))
         if engine_name == "Chinese":
             print("Using Chinese")
             import easyocr
@@ -20,7 +22,7 @@ class OCREngine:
         elif engine_name == "Japanese":
             from transformers import AutoFeatureExtractor, AutoTokenizer, VisionEncoderDecoderModel
 
-            self.pretrained_model_name_or_path = r"./SSHelper"
+            self.pretrained_model_name_or_path = os.path.join(script_dir, "model")
             self.feature_extractor = AutoFeatureExtractor.from_pretrained(self.pretrained_model_name_or_path)
 
             self.tokenizer = AutoTokenizer.from_pretrained(self.pretrained_model_name_or_path)
@@ -28,7 +30,7 @@ class OCREngine:
 
     def post_process(self, text):
         if self.engine_name == "Chinese":
-            return ((((text.replace('[','')).replace('\'','')).replace(']','')).replace(':.','...')).trplsvr(':','...')
+            return ((((text.replace('[','')).replace('\'','')).replace(']','')).replace(':.','...'))
         text = ''.join(text.split())
         text = text.replace('…', '...')
         text = re.sub('[・.]{2,}', lambda x: (x.end() - x.start()) * '.', text)
@@ -52,17 +54,15 @@ class OCREngine:
             )
         elif self.engine_name == "Japanese" and self.feature_extractor and self.tokenizer and self.model:
             x = self.preprocess(np_image)
-            x = self.model.generate(x[None].to(self.model.device), max_length=300)[0].cpu()
+            x = self.model.generate(x[None].to(self.model.device), max_length=300)[0] #.cpu()
             x = self.tokenizer.decode(x, skip_special_tokens=True)
             x = self.post_process(x)
             return [x]
         
     def cleanup(self):
-        try:
-            if self.reader or self.model:
-                import torch
-                torch.cuda.empty_cache()
-        except:
+        if self.reader or self.model:
+            import torch
+            torch.cuda.empty_cache()
             pass
         self.reader = None
         self.model = None
