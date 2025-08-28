@@ -13,6 +13,13 @@
 
 ## :wrench: Installation (For now please refer to the For Experienced section, need to make Install properly.bat)
 
+Install DeepL Translator if you wnat to use
+```
+git clone https://github.com/SatyamSSJ10/Deepl
+cd Deepl
+pip install .
+```
+
 The code in this repo is essentially for CPU usage only, it is working very good on my i5 11400, so I think it'll work great on your PC too.
 
 ```
