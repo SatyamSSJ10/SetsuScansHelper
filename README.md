@@ -1,4 +1,5 @@
 # Setsu Scans Translator Helper Tool (Early Release)
+### There have been many improvements after this, but let me tell you this is hugely vibe coded.
 ## Refer to the Youtube Video for Usage Guides
 ![Page1](docs/page_1.png)
 ![Page2](docs/page_2.png)
